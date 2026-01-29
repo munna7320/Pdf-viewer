@@ -8,6 +8,10 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: '0.0.0.0',
+        allowedHosts: [
+          'pdf-viewer-50sk.onrender.com', // Add this to allow the external host
+          'localhost', // Keep localhost for local development
+        ],
       },
       plugins: [react()],
       define: {
